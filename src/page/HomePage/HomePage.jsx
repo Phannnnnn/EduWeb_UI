@@ -1,4 +1,4 @@
-import banner from "../../assets/img/banner.png";
+import home_banner from "../../assets/img/home-banner.png";
 import variant_1 from "../../assets/icon/Variant-1.png";
 import variant_2 from "../../assets/icon/Variant-2.png";
 import variant_3 from "../../assets/icon/Variant-3.png";
@@ -48,12 +48,19 @@ const commentImgItems = [
 
 const HomePage = () => {
   return (
-    <div>
-      <div>
-        <img src={banner} alt="banner-img" />
+    <div className="w-full overflow-x-hidden">
+      {/* Banner Section */}
+      <div className="w-full">
+        <img
+          src={home_banner}
+          alt="banner-img"
+          className="w-full h-auto object-cover"
+        />
       </div>
-      <div className="px-40 py-6">
-        <div className="flex bg-[#C6C7C8] justify-start rounded-lg p-12 gap-4">
+
+      {/* Counter Cards Section */}
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-4 md:py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-[#C6C7C8] rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 gap-3 md:gap-4">
           <CounterCard
             image={variant_1}
             value={"500"}
@@ -84,118 +91,144 @@ const HomePage = () => {
           />
         </div>
       </div>
-      <div className="flex justify-center">
+
+      {/* CTA Button */}
+      <div className="flex justify-center px-4">
         <ButtonSecond label={"Đăng ký nhận tư vấn"} />
       </div>
-      <div className="flex justify-center items-center py-4 mt-3">
-        <span className="font-bold text-2xl">
+
+      {/* Course Title */}
+      <div className="flex justify-center items-center py-4 mt-3 px-4">
+        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
           Khóa học tiếng Nhật từ cơ bản đến nâng cao
         </span>
       </div>
-      <div className="flex justify-center items-center gap-8">
+
+      {/* Court Slides */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 px-4 sm:px-8 md:px-16 lg:px-24">
         {courtSlideItems.map((item) => (
           <img
             key={item.label}
             src={item.img}
             alt={item.label}
-            className="object-contain w-52"
+            className="object-contain w-full h-auto"
           />
         ))}
       </div>
-      <div className="flex justify-center py-6">
+
+      {/* CTA Button */}
+      <div className="flex justify-center py-6 px-4">
         <ButtonSecond label={"Nhận tư vấn miễn phí"} />
       </div>
-      <div className="flex justify-evenly items-center gap-16 py-4 px-90">
-        <div className="">
-          <span className="font-semibold text-lg text-pretty">
+
+      {/* Books Section */}
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-16 py-4 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
+        <div className="w-full lg:w-1/3">
+          <span className="font-semibold text-base sm:text-lg text-center lg:text-left block">
             Bộ sách tiếng Nhật dành cho người mới học đến học chuyên sâu
           </span>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4 w-full lg:w-2/3">
           {bookImgItems.map((item) => (
             <img
               key={item.label}
               src={item.img}
               alt={item.label}
-              className="object-contain w-36"
+              className="object-contain w-full h-auto"
             />
           ))}
         </div>
       </div>
-      <div className="flex justify-center">
+
+      {/* CTA Button */}
+      <div className="flex justify-center px-4">
         <ButtonSecond label={"Xem tất cả giáo trình"} />
       </div>
-      <div className="flex justify-center items-center py-4 mt-3">
-        <span className="font-bold text-2xl">
+
+      {/* Teachers Title */}
+      <div className="flex justify-center items-center py-4 mt-3 px-4">
+        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
           Đội ngũ giảng viên - chuyên gia tại Jellyfish
         </span>
       </div>
 
-      <div className="flex px-48">
-        <div className="flex gap-6">
+      {/* Teachers Cards */}
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <InforCard />
           <InforCard />
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-4 mt-5">
-        <span className="font-bold text-2xl">
+      {/* Reviews Title */}
+      <div className="flex justify-center items-center py-4 mt-5 px-4">
+        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
           Học viên nói gì về Jellyfish?
         </span>
       </div>
 
-      <div className="flex gap-4 justify-between px-48 ">
+      {/* Comments Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
         {commentImgItems.map((item) => (
           <img
             key={item.label}
             src={item.img}
             alt={item.label}
-            className="object-contain"
+            className="object-contain w-full h-auto"
           />
         ))}
       </div>
 
-      <div className="flex justify-center items-center py-4 mt-5">
-        <span className="font-bold text-2xl">Bản tin Jellyfish</span>
+      {/* Newsletter Title */}
+      <div className="flex justify-center items-center py-4 mt-5 px-4">
+        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+          Bản tin Jellyfish
+        </span>
       </div>
 
-      <div className="flex justify-center items-center">
-        <span className="font-semibold text-lg text-center max-w-2xl text-[#41464B]">
+      {/* Newsletter Description */}
+      <div className="flex justify-center items-center px-4">
+        <span className="font-semibold text-sm sm:text-base md:text-lg text-center max-w-2xl text-[#41464B]">
           Chia sẻ những hoạt động nổi bật, hình ảnh, khoảnh khắc đáng nhớ của
           học viên Jellyfish Việt Nam.
         </span>
       </div>
 
-      <div className="flex justify-between px-48 py-8">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="w-90 h-90 bg-[#D9D9D9]"></div>
-          <div className="w-90 h-90 bg-[#D9D9D9]"></div>
-          <div className="w-90 h-90 bg-[#D9D9D9]"></div>
-          <div className="w-90 h-90 bg-[#D9D9D9]"></div>
-          <div className="w-90 h-90 bg-[#D9D9D9]"></div>
-          <div className="w-90 h-90 bg-[#D9D9D9]"></div>
+      {/* Newsletter Grid */}
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 py-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
+          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
+          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
+          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
+          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
+          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
         </div>
       </div>
 
-      <div className="flex justify-center">
+      {/* CTA Button */}
+      <div className="flex justify-center px-4">
         <ButtonSecond label={"Đăng ký học ngay"} />
       </div>
 
+      {/* Knowledge Section */}
       <div className="bg-[#D9D9D9] mt-4">
-        <div className="px-48 pb-24 flex flex-col">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 pb-12 md:pb-24 flex flex-col">
           <div className="pb-4 mt-5">
-            <div className="flex justify-center items-center ">
-              <span className="font-bold text-2xl">Kiến thức hữu ích</span>
-            </div>
             <div className="flex justify-center items-center">
-              <span className="font-semibold text-lg text-center max-w-2xl text-[#41464B]">
+              <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+                Kiến thức hữu ích
+              </span>
+            </div>
+            <div className="flex justify-center items-center px-4">
+              <span className="font-semibold text-sm sm:text-base md:text-lg text-center max-w-2xl text-[#41464B]">
                 Cung cấp những kinh nghiệm, bí kíp học tiếng Nhật từ sơ cấp đến
                 cao cấp.
               </span>
             </div>
           </div>
 
-          <div className="flex gap-4 justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <CourtBannerCard />
             <CourtBannerCard />
             <CourtBannerCard />
@@ -203,13 +236,18 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="px-48 flex gap-24 py-12">
-        <div>
-          <img src={banner_sale} alt="banner-sale" className="object-contain" />
+      {/* Registration Form Section */}
+      <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-24 py-8 md:py-12">
+        <div className="w-full lg:w-1/2">
+          <img
+            src={banner_sale}
+            alt="banner-sale"
+            className="object-contain w-full h-auto"
+          />
         </div>
-        <div>
-          <div className="flex justify-center items-center ">
-            <span className="font-bold text-2xl">
+        <div className="flex flex-col gap-4 w-full lg:w-1/2">
+          <div className="flex">
+            <span className="font-bold text-lg sm:text-xl md:text-2xl">
               Đăng ký học tiếng Nhật tại Jellyfish
             </span>
           </div>
@@ -230,10 +268,10 @@ const HomePage = () => {
               label={"Email bạn hay sử dụng"}
               placeholder={""}
             />
-            {/* <SelectionInput
-              id={"select-court"}
+            <SelectionInput
               label={"Vui lòng chọn khóa học để được tư vấn"}
-            /> */}
+              id={"court_selection"}
+            />
 
             <div className="flex justify-center mt-3">
               <ButtonSecond label={"Nhận tư vấn miễn phí"} />

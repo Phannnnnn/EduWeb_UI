@@ -5,12 +5,12 @@ import ButtonSecond from "../../common/ButtonSecond";
 
 const navItems = [
   { label: "Trang chủ", path: "/" },
-  { label: "Về Jellyfish Việt Nam", path: "" },
-  { label: "Khóa học", path: "" },
-  { label: "Lịch khai giảng", path: "" },
-  { label: "Giáo trình", path: "" },
-  { label: "Kiến thức hữu ích", path: "" },
-  { label: "Tin tức", path: "" },
+  { label: "Về Jellyfish Việt Nam", path: "/jellyfish-infor" },
+  { label: "Khóa học", path: "/court" },
+  { label: "Lịch khai giảng", path: "/openning-schedule" },
+  { label: "Giáo trình", path: "/curriculum" },
+  { label: "Kiến thức hữu ích", path: "/knowledge" },
+  { label: "Tin tức", path: "/news" },
 ];
 
 const Header = () => {
