@@ -1,10 +1,10 @@
 const InputSearch = () => {
   return (
-    <div className="flex items-center py-2 px-5 gap-3 bg-[#B3B1B8]/30 rounded-lg border border-transparent focus-within:border-[#237A37]">
+    <div className="flex items-center py-2 px-5 gap-3 bg-[#ECECED] w-full lg:w-auto rounded-lg border border-transparent">
       <input
         type="text"
         placeholder="Tìm kiếm..."
-        className=" text-[#B3B1B8] leading-6 outline-none font-semibold text-sm"
+        className=" text-[#B3B1B8] leading-6 outline-none font-semibold text-xs w-full lg:w-auto"
       />
       <svg
         width="24"

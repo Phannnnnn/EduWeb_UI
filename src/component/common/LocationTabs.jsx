@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SelectionVertical = ({
+const LocationTabs = ({
   items = [
     { label: "Lớp online" },
     { label: "Hà Nội" },
@@ -14,12 +14,13 @@ const SelectionVertical = ({
   };
 
   return (
-    <div className="flex gap-3 bg-[#F3F3F4] rounded-2xl">
+    <div className="flex flex-col sm:flex-row gap-2 bg-[#F3F3F4] rounded-2xl">
       {items.map((item, index) => {
         const isActive = index === selectedItemsIndex;
         return (
           <div
-            className={`${isActive ? "bg-[#237A37] text-white" : "text-[#8D8A95] cursor-pointer"} flex px-4 py-2 rounded-xl font-semibold transition-all duration-300`}
+            key={item.label}
+            className={`${isActive ? "bg-[#237A37] text-white" : "text-[#8D8A95] cursor-pointer"} flex px-4 py-2 rounded-xl font-semibold transition-all duration-300 text-xs sm:text-sm md:text-base`}
             onClick={() => handleSelectItemsIndex(index)}
           >
             <span>{item.label}</span>
@@ -30,4 +31,4 @@ const SelectionVertical = ({
   );
 };
 
-export default SelectionVertical;
+export default LocationTabs;

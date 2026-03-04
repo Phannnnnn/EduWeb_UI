@@ -16,11 +16,12 @@ import book_img_6 from "../../assets/book-img/book-img-6.png";
 import comment_img_1 from "../../assets/comment/comment-img-1.png";
 import comment_img_2 from "../../assets/comment/comment-img-2.png";
 import comment_img_3 from "../../assets/comment/comment-img-3.png";
+import moment_1 from "../../assets/moments/moment-1.png";
 import banner_sale from "../../assets/img/banner-sale.png";
-import CounterCard from "../../component/common/CounterCard";
+import StatsSection from "../../component/common/StatsSection";
 import ButtonSecond from "../../component/common/ButtonSecond";
-import InforCard from "../../component/common/InforCard";
-import CourtBannerCard from "../../component/common/CourtBannerCard";
+import TeacherCard from "../../component/common/TeacherCard";
+import CoursesBannerCard from "../../component/common/CoursesBannerCard";
 import InputText from "../../component/common/InputText";
 import SelectionInput from "../../component/common/SelectionInput";
 
@@ -49,7 +50,6 @@ const commentImgItems = [
 const HomePage = () => {
   return (
     <div className="w-full overflow-x-hidden">
-      {/* Banner Section */}
       <div className="w-full">
         <img
           src={home_banner}
@@ -58,31 +58,30 @@ const HomePage = () => {
         />
       </div>
 
-      {/* Counter Cards Section */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-4 md:py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-[#C6C7C8] rounded-lg p-4 sm:p-6 md:p-8 lg:p-12 gap-3 md:gap-4">
-          <CounterCard
+          <StatsSection
             image={variant_1}
             value={"500"}
             label={
               "Là số lượng học viên hàng tháng của Trung tâm Jellyfish Vietnam trên khắp cả nước."
             }
           />
-          <CounterCard
+          <StatsSection
             image={variant_2}
             value={"60"}
             label={
               "Là số lớp mở hàng tháng bao gồm lớp online và offline tại tất cả các chi nhánh."
             }
           />
-          <CounterCard
+          <StatsSection
             image={variant_3}
             value={"20"}
             label={
               "Là số lượng doanh nghiệp & trường học đã, đang sử dụng dịch vụ đào tạo của Jellyfish."
             }
           />
-          <CounterCard
+          <StatsSection
             image={variant_4}
             value={"150"}
             label={
@@ -92,19 +91,16 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* CTA Button */}
       <div className="flex justify-center px-4">
         <ButtonSecond label={"Đăng ký nhận tư vấn"} />
       </div>
 
-      {/* Course Title */}
       <div className="flex justify-center items-center py-4 mt-3 px-4">
-        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+        <span className="font-bold text-base sm:text-lg md:text-xl text-center">
           Khóa học tiếng Nhật từ cơ bản đến nâng cao
         </span>
       </div>
 
-      {/* Court Slides */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 px-4 sm:px-8 md:px-16 lg:px-24">
         {courtSlideItems.map((item) => (
           <img
@@ -116,12 +112,10 @@ const HomePage = () => {
         ))}
       </div>
 
-      {/* CTA Button */}
       <div className="flex justify-center py-6 px-4">
         <ButtonSecond label={"Nhận tư vấn miễn phí"} />
       </div>
 
-      {/* Books Section */}
       <div className="flex flex-col lg:flex-row justify-between items-center gap-6 lg:gap-16 py-4 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40">
         <div className="w-full lg:w-1/3">
           <span className="font-semibold text-base sm:text-lg text-center lg:text-left block">
@@ -140,34 +134,29 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* CTA Button */}
       <div className="flex justify-center px-4">
         <ButtonSecond label={"Xem tất cả giáo trình"} />
       </div>
 
-      {/* Teachers Title */}
       <div className="flex justify-center items-center py-4 mt-3 px-4">
-        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+        <span className="font-bold text-base sm:text-lg md:text-xl text-center">
           Đội ngũ giảng viên - chuyên gia tại Jellyfish
         </span>
       </div>
 
-      {/* Teachers Cards */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <InforCard />
-          <InforCard />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+          <TeacherCard />
+          <TeacherCard />
         </div>
       </div>
 
-      {/* Reviews Title */}
       <div className="flex justify-center items-center py-4 mt-5 px-4">
-        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+        <span className="font-bold text-base sm:text-lg md:text-xl text-center">
           Học viên nói gì về Jellyfish?
         </span>
       </div>
 
-      {/* Comments Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48">
         {commentImgItems.map((item) => (
           <img
@@ -179,14 +168,12 @@ const HomePage = () => {
         ))}
       </div>
 
-      {/* Newsletter Title */}
       <div className="flex justify-center items-center py-4 mt-5 px-4">
-        <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+        <span className="font-bold text-base sm:text-lg md:text-xl text-center">
           Bản tin Jellyfish
         </span>
       </div>
 
-      {/* Newsletter Description */}
       <div className="flex justify-center items-center px-4">
         <span className="font-semibold text-sm sm:text-base md:text-lg text-center max-w-2xl text-[#41464B]">
           Chia sẻ những hoạt động nổi bật, hình ảnh, khoảnh khắc đáng nhớ của
@@ -194,29 +181,62 @@ const HomePage = () => {
         </span>
       </div>
 
-      {/* Newsletter Grid */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 py-8">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
-          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
-          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
-          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
-          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
-          <div className="aspect-square bg-[#D9D9D9] rounded"></div>
+          <div className="">
+            <img
+              src={moment_1}
+              alt="img"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="">
+            <img
+              src={moment_1}
+              alt="img"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="">
+            <img
+              src={moment_1}
+              alt="img"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="">
+            <img
+              src={moment_1}
+              alt="img"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="">
+            <img
+              src={moment_1}
+              alt="img"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="">
+            <img
+              src={moment_1}
+              alt="img"
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </div>
       </div>
 
-      {/* CTA Button */}
       <div className="flex justify-center px-4">
         <ButtonSecond label={"Đăng ký học ngay"} />
       </div>
 
-      {/* Knowledge Section */}
       <div className="bg-[#D9D9D9] mt-4">
         <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 pb-12 md:pb-24 flex flex-col">
           <div className="pb-4 mt-5">
             <div className="flex justify-center items-center">
-              <span className="font-bold text-lg sm:text-xl md:text-2xl text-center">
+              <span className="font-bold text-base sm:text-lg md:text-xl text-center">
                 Kiến thức hữu ích
               </span>
             </div>
@@ -229,14 +249,13 @@ const HomePage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <CourtBannerCard />
-            <CourtBannerCard />
-            <CourtBannerCard />
+            <CoursesBannerCard />
+            <CoursesBannerCard />
+            <CoursesBannerCard />
           </div>
         </div>
       </div>
 
-      {/* Registration Form Section */}
       <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-24 py-8 md:py-12">
         <div className="w-full lg:w-1/2">
           <img
@@ -247,7 +266,7 @@ const HomePage = () => {
         </div>
         <div className="flex flex-col gap-4 w-full lg:w-1/2">
           <div className="flex">
-            <span className="font-bold text-lg sm:text-xl md:text-2xl">
+            <span className="font-bold text-base sm:text-lg md:text-xl">
               Đăng ký học tiếng Nhật tại Jellyfish
             </span>
           </div>

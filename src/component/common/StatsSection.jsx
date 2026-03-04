@@ -1,4 +1,4 @@
-const CounterCard = ({ image, value, label }) => {
+const StatsSection = ({ image, value, label }) => {
   return (
     <div className="flex flex-col items-center gap-2 flex-1">
       <img
@@ -16,4 +16,4 @@ const CounterCard = ({ image, value, label }) => {
   );
 };
 
-export default CounterCard;
+export default StatsSection;

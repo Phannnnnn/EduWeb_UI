@@ -3,16 +3,15 @@ import logoImg from "../../../assets/img/logo-transparent.png";
 
 const navItems = [
   { label: "Trang chủ", path: "/" },
-  { label: "Về Jellyfish", path: "" },
-  { label: "Khóa học", path: "" },
-  { label: "Giáo trình", path: "" },
-  { label: "Kiến thức hữu ích", path: "" },
+  { label: "Về Jellyfish", path: "/about" },
+  { label: "Khóa học", path: "/courses" },
+  { label: "Giáo trình", path: "/curriculum" },
+  { label: "Kiến thức hữu ích", path: "/knowledge" },
 ];
 
 const Footer = () => {
   return (
     <footer className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-48 bg-[#110C22]">
-      {/* Logo and Navigation */}
       <div className="flex flex-col md:flex-row items-center justify-between py-6 md:py-8 gap-4 md:gap-0">
         <Link className="flex flex-col items-center md:items-start">
           <img
@@ -29,7 +28,7 @@ const Footer = () => {
             <Link
               key={index}
               to={item.path}
-              className="font-semibold text-xs sm:text-sm md:text-base text-white hover:text-[#237A37] transition-colors"
+              className="font-semibold text-xs sm:text-sm md:text-base text-white transition-colors"
             >
               {item.label}
             </Link>
@@ -145,7 +144,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* JELLYFISH VIỆT NAM */}
         <div className="flex flex-col gap-3 md:gap-4">
           <span className="text-white font-semibold text-sm sm:text-base">
             JELLYFISH VIỆT NAM
@@ -250,7 +248,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Chi nhánh Hải Phòng */}
         <div className="flex flex-col gap-3 md:gap-4">
           <span className="text-white font-semibold text-sm sm:text-base">
             Chi nhánh Hải Phòng
@@ -310,7 +307,6 @@ const Footer = () => {
 
       <div className="border-t border-[#2E293D]"></div>
 
-      {/* Copyright and Social Media */}
       <div className="flex flex-col sm:flex-row justify-between items-center p-4 sm:p-6 md:p-8 gap-4">
         <div>
           <span className="text-[#B3B1B8] text-xs sm:text-sm text-center sm:text-left block">

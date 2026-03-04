@@ -2,12 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import HomeLayout from "../layouts/homeLayout/HomeLayout";
 import HomePage from "../page/HomePage/HomePage";
-import JellyfishInforPage from "../page/JellyfishInforPage/JellyfishInforPage";
-import CourtPage from "../page/CourtPage/CourtPage";
-import OpenningSchedulePage from "../page/Openning-Schedule/OpenningSchedulePage";
 import NewsPage from "../page/News/NewsPage";
 import CurriculumPage from "../page/Curriculum/CurriculumPage";
 import KnowledgePage from "../page/Knowledge/KnowledgePage";
+import About from "../page/AboutPage/About";
+import CoursesPage from "../page/CoursesPage/CoursesPage";
+import SchedulePage from "../page/SchedulePage/SchedulePage";
+import Detail from "../page/Detail/Detail";
 
 export const Router = createBrowserRouter([
   {
@@ -18,12 +19,13 @@ export const Router = createBrowserRouter([
         element: <HomeLayout />,
         children: [
           { index: true, element: <HomePage /> },
-          { path: "jellyfish-infor", element: <JellyfishInforPage /> },
-          { path: "court", element: <CourtPage /> },
-          { path: "openning-schedule", element: <OpenningSchedulePage /> },
+          { path: "about", element: <About /> },
+          { path: "courses", element: <CoursesPage /> },
+          { path: "schedule", element: <SchedulePage /> },
           { path: "curriculum", element: <CurriculumPage /> },
           { path: "knowledge", element: <KnowledgePage /> },
           { path: "news", element: <NewsPage /> },
+          { path: "detail/:id", element: <Detail /> },
         ],
       },
     ],

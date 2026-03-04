@@ -1,6 +1,6 @@
 import court_img_banner from "../../assets/img/image34.png";
 
-const CourtBannerCard = () => {
+const CoursesBannerCard = () => {
   return (
     <div className="flex flex-col justify-center items-center bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
       <img
@@ -21,4 +21,4 @@ const CourtBannerCard = () => {
   );
 };
 
-export default CourtBannerCard;
+export default CoursesBannerCard;
